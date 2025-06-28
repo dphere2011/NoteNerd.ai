@@ -10,7 +10,8 @@ html,body{
 
 .header{
     display:flex;
-    justify-content:center;
+    align-items:center;
+    flex-direction: column;
 
     nav{
         width: 80%;
