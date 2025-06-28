@@ -4,7 +4,7 @@
 }
 
 html, body {
-  background-color: #939393;
+  background-color: #8572D5;
   font-family: "Poppins", sans-serif;
 }
 
@@ -14,17 +14,18 @@ html, body {
   flex-direction: column;
 }
 .header nav {
-  width: 80%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: sticky;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  top: 20px;
+  border-radius: 50px;
   background-color: #FAFAFA;
+  padding: 10px;
 }
 .header nav .logo img {
-  height: 100px;
+  height: 60px;
 }
 .header nav .links {
   display: flex;
@@ -43,4 +44,12 @@ html, body {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 10px;
+}
+.header h1 {
+  margin-top: 75px;
+  font-size: 60px;
+  font-weight: 500;
+}
+.header p {
+  margin-top: 30px;
 }/*# sourceMappingURL=style.css.map */
