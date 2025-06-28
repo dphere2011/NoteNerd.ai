@@ -1,6 +1,7 @@
 ### ***The notes nerds wished they had***
 
 by **afgji.Error404**
+---
 
 ## The Problem
 
