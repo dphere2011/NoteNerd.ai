@@ -1,4 +1,4 @@
-#**NotesNerd.ai**
+# **NotesNerd.ai**
 ### ***The notes nerds wished they had***
 
 
