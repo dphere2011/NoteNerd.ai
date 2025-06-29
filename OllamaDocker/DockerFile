@@ -1,0 +1,6 @@
+FROM ollama/ollama
+
+RUN ollama pull llama-3.2-visual:11b
+
+EXPOSE 11434
+CMD ["ollama", "serve"]
