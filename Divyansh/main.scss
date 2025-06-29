@@ -1,9 +1,8 @@
-$bg: #0e1117;
-$text: #f1f5f9;
-$subtext: #94a3b8;
+$bg: #0e1117;       
 $card: #ffffff;
-$cardText: #0f172a;
-$border: #334155;
+$text: #0f172a;      
+$subtext: #64748b;
+$border: #e2e8f0;
 $accent: #3b82f6;
 
 body {
@@ -22,20 +21,21 @@ body {
 h1 {
   font-size: 32px;
   margin-bottom: 10px;
+  color: $card;
 }
 
 .subtitle {
   font-size: 16px;
-  color: $subtext;
+  color: lighten($subtext, 20%);
   margin-bottom: 30px;
 }
 
 .card {
   background-color: $card;
-  color: $cardText;
+  color: $text;
   border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin-bottom: 30px;
 }
 
@@ -55,7 +55,7 @@ textarea {
   border-radius: 10px;
   resize: vertical;
   outline: none;
-  background-color: $bg;
+  background-color: #f9fafb;
   color: $text;
 }
 
@@ -71,7 +71,7 @@ textarea {
     font-size: 14px;
     border-radius: 10px;
     border: 2px solid $border;
-    background-color: $bg;
+    background-color: #f9fafb;
     color: $text;
   }
 
@@ -98,21 +98,15 @@ textarea {
   h2 {
     font-size: 18px;
     font-weight: 600;
-    color: $cardText;
   }
 
   button.copy {
-    background-color: $bg;
-    color: $text;
-    border: 1px solid $border;
+    background-color: #f1f5f9;
+    border: none;
     padding: 8px 14px;
     border-radius: 8px;
     font-size: 14px;
     cursor: pointer;
-
-    &:hover {
-      background-color: lighten($bg, 5%);
-    }
   }
 }
 
@@ -127,13 +121,12 @@ textarea {
     padding: 15px;
     margin-bottom: 15px;
     display: inline-block;
-    color: $cardText;
+    color: $text;
   }
 
   .empty-title {
     font-weight: 600;
     font-size: 16px;
-    color: $cardText;
   }
 
   .empty-desc {
@@ -143,7 +136,6 @@ textarea {
   }
 }
 
-// 📱 Responsive
 @media (max-width: 768px) {
   .input-row {
     flex-direction: column;

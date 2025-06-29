@@ -1,7 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #0e1117;
-  color: #f1f5f9;
+  color: #0f172a;
   margin: 0;
   padding: 20px;
 }
@@ -14,11 +14,12 @@ body {
 h1 {
   font-size: 32px;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .subtitle {
   font-size: 16px;
-  color: #94a3b8;
+  color: #9da8b8;
   margin-bottom: 30px;
 }
 
@@ -27,7 +28,7 @@ h1 {
   color: #0f172a;
   border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin-bottom: 30px;
 }
 
@@ -43,12 +44,12 @@ textarea {
   height: 150px;
   padding: 15px;
   font-size: 14px;
-  border: 1px solid #334155;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   resize: vertical;
   outline: none;
-  background-color: #0e1117;
-  color: #f1f5f9;
+  background-color: #f9fafb;
+  color: #0f172a;
 }
 
 .input-row {
@@ -62,9 +63,9 @@ textarea {
   padding: 10px;
   font-size: 14px;
   border-radius: 10px;
-  border: 2px solid #334155;
-  background-color: #0e1117;
-  color: #f1f5f9;
+  border: 2px solid #e2e8f0;
+  background-color: #f9fafb;
+  color: #0f172a;
 }
 .input-row button.generate {
   background-color: #3b82f6;
@@ -87,19 +88,14 @@ textarea {
 .generated-header h2 {
   font-size: 18px;
   font-weight: 600;
-  color: #0f172a;
 }
 .generated-header button.copy {
-  background-color: #0e1117;
-  color: #f1f5f9;
-  border: 1px solid #334155;
+  background-color: #f1f5f9;
+  border: none;
   padding: 8px 14px;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-}
-.generated-header button.copy:hover {
-  background-color: #181d27;
 }
 
 .placeholder {
@@ -118,12 +114,11 @@ textarea {
 .placeholder .empty-title {
   font-weight: 600;
   font-size: 16px;
-  color: #0f172a;
 }
 .placeholder .empty-desc {
   font-size: 14px;
   margin-top: 5px;
-  color: #94a3b8;
+  color: #64748b;
 }
 
 @media (max-width: 768px) {
