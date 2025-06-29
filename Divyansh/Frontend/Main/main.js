@@ -1,75 +1,62 @@
-const generateBtn = document.querySelector(".generate");
-const copyBtn = document.querySelector(".copy");
-const chapterInput = document.getElementById("chapter-input");
-const noteFormat = document.getElementById("note-format");
-const outputCard = document.querySelector(".card:nth-of-type(2)");
-const placeholder = outputCard.querySelector(".placeholder");
-
-let resultDiv = document.createElement("div");
-resultDiv.id = "result";
-outputCard.appendChild(resultDiv);
-
-resultDiv.style.display = "none";
-
-generateBtn.addEventListener("click", async () => {
-  const text = chapterInput.value.trim();
-  const format = noteFormat.value;
+// ========== AI Note Generation ==========
+document.querySelector(".generate").addEventListener("click", async () => {
+  const input = document.getElementById("chapter-input");
+  const text = input.value.trim();
+  const format = document.getElementById("note-format").value;
+  const output = document.querySelector(".placeholder");
 
   if (!text) {
-    alert("Please paste some chapter content.");
+    alert("📄 Please paste some text or upload a PDF.");
     return;
   }
 
-  placeholder.style.display = "none";
-  resultDiv.style.display = "block";
-  resultDiv.innerHTML = "⏳ Generating notes...";
+  output.innerHTML = "⏳ Generating notes...";
+  output.style.overflowY = "auto";
 
   try {
     const response = await fetch("http://localhost:8000/generate", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        text: text,
-        format: format
-      }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text, format }),
     });
 
     const data = await response.json();
 
-    if (data && data.notes) {
-      resultDiv.innerText = data.notes;
-    } else {
-      resultDiv.innerText = "❌ Failed to generate notes.";
-    }
+    output.innerHTML = `<pre style="white-space: pre-wrap; word-wrap: break-word;">${data.notes}</pre>`;
   } catch (err) {
     console.error(err);
-    resultDiv.innerText = "⚠️ Error: Could not connect to server.";
+    output.innerHTML = "❌ Failed to generate notes. Please check the server or try again.";
   }
 });
 
-copyBtn.addEventListener("click", () => {
-  const notes = resultDiv.innerText;
-  if (notes) {
-    navigator.clipboard.writeText(notes);
-    copyBtn.innerText = "✅ Copied!";
-    setTimeout(() => {
-      copyBtn.innerText = "📋 Copy";
-    }, 1500);
+// ========== Copy Button ==========
+document.querySelector(".copy").addEventListener("click", () => {
+  const text = document.querySelector(".placeholder").innerText;
+  if (!text || text.includes("No notes")) {
+    alert("📝 Nothing to copy yet!");
+    return;
   }
+
+  navigator.clipboard.writeText(text);
+  alert("✅ Notes copied to clipboard!");
 });
 
-document.getElementById("pdf-input").addEventListener("change", async (event) => {
-  const file = event.target.files[0];
-  if (!file) return;
+// ========== PDF Upload & Parsing ==========
+document.getElementById("pdf-input").addEventListener("change", async function () {
+  const file = this.files[0];
+  const fileName = file ? file.name : "No file selected";
+  document.getElementById("file-name").textContent = fileName;
+
+  if (!file || file.type !== "application/pdf") {
+    alert("❌ Please upload a valid PDF file.");
+    return;
+  }
 
   const reader = new FileReader();
   reader.readAsArrayBuffer(file);
 
   reader.onload = async function () {
     const typedarray = new Uint8Array(reader.result);
-
     const pdf = await pdfjsLib.getDocument(typedarray).promise;
     let fullText = "";
 
@@ -82,9 +69,4 @@ document.getElementById("pdf-input").addEventListener("change", async (event) =>
 
     document.getElementById("chapter-input").value = fullText;
   };
-});
-
-document.getElementById("pdf-input").addEventListener("change", function () {
-  const fileName = this.files.length ? this.files[0].name : "No file selected";
-  document.getElementById("file-name").textContent = fileName;
 });
