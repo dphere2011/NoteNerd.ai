@@ -15,7 +15,7 @@ Git (for cloning)
 Open your terminal or command prompt and run:
 
 ```jsx
-git clone https://github.com/dphere2011/NoteNerd.ai.git
+git clone http://github.com/dphere2011/NoteNerd.ai.git
 cd ./NoteNerd.ai/Divyansh
 ```
 
@@ -31,7 +31,7 @@ python init-setup.py
 (For Debian / MacOS):
 
 ```jsx
-python3 [init-setup.py](http://init-setup.py) 
+python3 init-setup.py 
 ```
 
 ### Step 3: Run the app (in the future)
