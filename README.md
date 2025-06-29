@@ -21,7 +21,7 @@ This leads to:
 
 ## Our Solution
 
-> We developed an AI agent that leverages Meta’s Llama 3.2 Visual 11B model, running locally on your PC—primarily offline. This agent is designed to streamline the process of generating study notes and clarifying concepts from textbooks and other educational materials. By providing clear and concise study material, our solution aims to turn any backbencher the topper.
+> We developed an AI agent that leverages Meta’s Llama 3.2 Vision 11B model, and you can either download our repository and run it locally on your PC (primarily offline) or use our webpage: <Insert Page here>. This agent is designed to streamline the process of generating study notes and clarifying concepts from textbooks and other educational materials. By providing clear and concise study material, our solution aims to turn any backbencher the topper.
 > 
 
 ### **Key Features:**
@@ -37,6 +37,6 @@ This leads to:
 
 1. **Upload Material:** The user uploads a PDF or image of their textbook or notes.
 2. **Select Topics:** The user specifies topics or sections of interest.
-3. **AI Processing:** The Llama 3.2 Visual 11B model processes the input, extracting and summarizing key information.
+3. **AI Processing:** The Llama 3.2 Vision 11B model processes the input, extracting and summarizing key information.
 4. **Note Generation:** Clean, structured notes are generated, highlighting important concepts and making revision straightforward.
 5. **Clarification & Q&A:** Users can ask further questions or request clarifications, with the AI maintaining context for a seamless revision experience.

@@ -1,4 +1,5 @@
 FROM ollama/ollama
+FROM ubuntu:22.04
 
 RUN ollama pull llama-3.2-visual:11b
 
