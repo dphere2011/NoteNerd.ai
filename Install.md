@@ -15,7 +15,7 @@ Git (for cloning)
 Open your terminal or command prompt and run:
 
 ```jsx
-git clone [https://github.com/](https://github.com/your-username/your-repo-name.git)dphere2011/NoteNerd.ai.git
+git clone https://github.com/dphere2011/NoteNerd.ai.git
 cd ./NoteNerd.ai/Divyansh
 ```
 
