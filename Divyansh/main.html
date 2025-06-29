@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NoteNerd – Generate Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1>Generate Notes</h1>
+    <p class="subtitle">Transform your chapters into structured study notes instantly</p>
+
+    <div class="card">
+      <label for="chapter-input">Chapter Content</label>
+      <textarea id="chapter-input" placeholder="Paste your chapter here..."></textarea>
+
+      <label for="note-format">Note Format</label>
+      <div class="input-row">
+        <select id="note-format">
+          <option>Bullet Notes</option>
+          <option>Q&A</option>
+          <option>Mind Map</option>
+          <option>Flashcards</option>
+        </select>
+        <button class="generate">⚡ Generate Notes</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="generated-header">
+        <h2>Generated Notes</h2>
+        <button class="copy">📋 Copy</button>
+      </div>
+      <div class="placeholder">
+        <div class="icon">📄</div>
+        <div class="empty-title">No notes generated yet</div>
+        <div class="empty-desc">
+          Paste your chapter content above and click "Generate Notes" to get started
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

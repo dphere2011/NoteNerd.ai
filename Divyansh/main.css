@@ -1,0 +1,143 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0e1117;
+  color: #f1f5f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  resize: vertical;
+  outline: none;
+  background-color: #0e1117;
+  color: #f1f5f9;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+.input-row select {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 2px solid #334155;
+  background-color: #0e1117;
+  color: #f1f5f9;
+}
+.input-row button.generate {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.input-row button.generate:hover {
+  background-color: #0b63f3;
+}
+
+.generated-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.generated-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.generated-header button.copy {
+  background-color: #0e1117;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.generated-header button.copy:hover {
+  background-color: #181d27;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 40px 20px;
+}
+.placeholder .icon {
+  font-size: 40px;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+  color: #0f172a;
+}
+.placeholder .empty-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0f172a;
+}
+.placeholder .empty-desc {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input-row select,
+  .input-row button.generate {
+    width: 100%;
+  }
+  .generated-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

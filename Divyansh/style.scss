@@ -11,6 +11,12 @@ body {
 header{
     width:100%;
 
+    a{
+        text-decoration: none;
+        color:black;
+        border:none;
+    }
+
     nav{
         display:Flex;
         justify-content: space-around;
@@ -35,6 +41,15 @@ header{
             a{
                 text-decoration:none;
                 color:black;
+            }
+        }
+
+        button{
+            background-color:#000;
+            color:white;
+            margin:0px;
+            a{
+                color:#fff;
             }
         }
     }
@@ -193,5 +208,10 @@ footer{
     button{
         background-color:#0E1117;
         color:#fff;
+
+        a{
+            text-decoration:none;
+            color:#fff;
+        }
     }
 }

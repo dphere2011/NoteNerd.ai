@@ -11,6 +11,11 @@ body {
 header {
   width: 100%;
 }
+header a {
+  text-decoration: none;
+  color: black;
+  border: none;
+}
 header nav {
   display: Flex;
   justify-content: space-around;
@@ -31,6 +36,14 @@ header nav .links {
 header nav .links a {
   text-decoration: none;
   color: black;
+}
+header nav button {
+  background-color: #000;
+  color: white;
+  margin: 0px;
+}
+header nav button a {
+  color: #fff;
 }
 header .intro {
   width: 50%;
@@ -172,5 +185,9 @@ footer p {
 }
 footer button {
   background-color: #0E1117;
+  color: #fff;
+}
+footer button a {
+  text-decoration: none;
   color: #fff;
 }/*# sourceMappingURL=style.css.map */
