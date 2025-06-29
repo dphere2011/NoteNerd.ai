@@ -14,6 +14,19 @@
     <p class="subtitle">Transform your chapters into structured study notes instantly</p>
 
     <div class="card">
+  <div class="file-upload-box">
+    <label for="file-upload" class="upload-label">
+      📄 Click to upload file
+      <input type="file" id="file-upload" accept=".pdf,.txt,.docx,.pptx,.xlsx" hidden />
+    </label>
+    <span id="file-filename">No file selected</span>
+    <span class="file-support-info">
+      Supports: PDF, TXT.
+    </span>
+  </div>
+</div>
+
+    <div class="card">
       <label for="chapter-input">Chapter Content</label>
       <textarea id="chapter-input" placeholder="Paste your chapter here..."></textarea>
 
@@ -44,5 +57,7 @@
     </div>
     
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

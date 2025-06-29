@@ -36,7 +36,7 @@ h1 {
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 label {
@@ -153,3 +153,38 @@ textarea {
     gap: 10px;
   }
 }
+
+.file-upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  .upload-label {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: lighten($accent, 10%);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    user-select: none;
+
+    &:hover {
+      background-color: darken($accent, 5%);
+    }
+  }
+
+  #file-filename {
+    font-size: 14px;
+    color: #000;
+  }
+
+  .file-support-info {
+    font-size: 12px;
+    color: lighten(#000, 10%);
+  }
+}
+
