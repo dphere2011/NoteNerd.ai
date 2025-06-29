@@ -4,6 +4,8 @@
 
 by **afgji.Error404**
 
+
+An AI notes builder/ topic summarizer aimed towards students.
 ---
 
 ## The Problem
@@ -21,7 +23,7 @@ This leads to:
 
 ## Our Solution
 
-> We developed an AI agent that leverages Meta’s Llama 3.2 Vision 11B model, and you can either download our repository and run it locally on your PC (primarily offline) or use our webpage: <Insert Page here>. This agent is designed to streamline the process of generating study notes and clarifying concepts from textbooks and other educational materials. By providing clear and concise study material, our solution aims to turn any backbencher the topper.
+> We developed an AI agent that leverages Meta’s Llama 3.2 Vision 11B model, and you can either download our repository and run it locally on your PC (primarily offline). This agent is designed to streamline the process of generating study notes and clarifying concepts from textbooks and other educational materials. By providing clear and concise study material, our solution aims to turn any backbencher the topper.
 > 
 
 ### **Key Features:**
