@@ -26,7 +26,7 @@ This leads to:
 
 ### **Key Features:**
 
-- **Local, Offline Operation:** The AI runs entirely on your own machine, ensuring privacy and no dependency on internet connectivity6.
+- **Local, Offline Operation:** The AI runs entirely on your own machine, ensuring privacy and no dependency on internet connectivity.
 - **Multimodal Input:** Users can upload textbooks or documents in PDF format. The model accepts both text and images, enabling it to parse a wide range of educational resources.
 - **Topic Selection:** Users specify the exact topics or chapters to be covered, either by highlighting sections in the PDF or by entering text prompts.
 - **Automated Note Generation:** The AI parses the provided material and generates concise, clean notes, focusing on important concepts and key points—making revision efficient and accessible even for students who struggle to keep up in class.
@@ -37,6 +37,6 @@ This leads to:
 
 1. **Upload Material:** The user uploads a PDF or image of their textbook or notes.
 2. **Select Topics:** The user specifies topics or sections of interest.
-3. **AI Processing:** The Llama 3.2 Visual 11B model processes the input, extracting and summarizing key information[4](https://aws.amazon.com/blogs/machine-learning/vision-use-cases-with-llama-3-2-11b-and-90b-models-from-meta/)[5](https://www.e2enetworks.com/blog/building-a-llama-3-2-11b-based-rag-system-with-vision-model-integration).
+3. **AI Processing:** The Llama 3.2 Visual 11B model processes the input, extracting and summarizing key information.
 4. **Note Generation:** Clean, structured notes are generated, highlighting important concepts and making revision straightforward.
 5. **Clarification & Q&A:** Users can ask further questions or request clarifications, with the AI maintaining context for a seamless revision experience.
