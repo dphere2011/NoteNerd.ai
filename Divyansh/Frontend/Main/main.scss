@@ -153,3 +153,63 @@ textarea {
     gap: 10px;
   }
 }
+
+.pdf-upload-label {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.pdf-upload-wrapper {
+  margin: 15px 0;
+}
+
+.upload-box {
+  background-color: #f9f9f9;
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  .upload-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .upload-text {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .file-name {
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+  }
+
+  &:hover {
+    background-color: #f0f0f0;
+    border-color: #888;
+  }
+}
+
+// Dark mode support
+body.dark .upload-box {
+  background-color: #1a1a1a;
+  border-color: #333;
+  color: #eee;
+
+  .file-name {
+    color: #aaa;
+  }
+
+  &:hover {
+    background-color: #222;
+    border-color: #555;
+  }
+}

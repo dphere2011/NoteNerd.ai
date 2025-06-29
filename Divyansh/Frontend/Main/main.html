@@ -6,12 +6,26 @@
   <title>NoteNerd – Generate Notes</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
 </head>
 <body>
   <div class="container">
 
     <h1>Generate Notes</h1>
     <p class="subtitle">Transform your chapters into structured study notes instantly</p>
+    
+<div class="pdf-upload-wrapper">
+  <input type="file" id="pdf-input" accept="application/pdf" hidden />
+  <label for="pdf-input" class="upload-box">
+    <div class="upload-icon">📄</div>
+    <div class="upload-text">
+      <strong>Click to upload</strong>
+    </div>
+    <div id="file-name" class="file-name">No file selected</div>
+  </label>
+</div>
+
 
     <div class="card">
       <label for="chapter-input">Chapter Content</label>

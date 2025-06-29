@@ -59,3 +59,32 @@ copyBtn.addEventListener("click", () => {
     }, 1500);
   }
 });
+
+document.getElementById("pdf-input").addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.readAsArrayBuffer(file);
+
+  reader.onload = async function () {
+    const typedarray = new Uint8Array(reader.result);
+
+    const pdf = await pdfjsLib.getDocument(typedarray).promise;
+    let fullText = "";
+
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      const text = content.items.map((item) => item.str).join(" ");
+      fullText += text + "\n";
+    }
+
+    document.getElementById("chapter-input").value = fullText;
+  };
+});
+
+document.getElementById("pdf-input").addEventListener("change", function () {
+  const fileName = this.files.length ? this.files[0].name : "No file selected";
+  document.getElementById("file-name").textContent = fileName;
+});

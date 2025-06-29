@@ -135,4 +135,56 @@ textarea {
     align-items: flex-start;
     gap: 10px;
   }
+}
+.pdf-upload-label {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.pdf-upload-wrapper {
+  margin: 15px 0;
+}
+
+.upload-box {
+  background-color: #f9f9f9;
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.upload-box .upload-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.upload-box .upload-text {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.upload-box .file-name {
+  font-size: 13px;
+  color: #777;
+  font-style: italic;
+}
+.upload-box:hover {
+  background-color: #f0f0f0;
+  border-color: #888;
+}
+
+body.dark .upload-box {
+  background-color: #1a1a1a;
+  border-color: #333;
+  color: #eee;
+}
+body.dark .upload-box .file-name {
+  color: #aaa;
+}
+body.dark .upload-box:hover {
+  background-color: #222;
+  border-color: #555;
 }/*# sourceMappingURL=main.css.map */
